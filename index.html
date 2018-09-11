@@ -447,7 +447,7 @@
                                         className: 'button',
                                         ['data-filter']: '.brand'
                                     }, "Brand")
-                                ),
+                                )
                             )
                         ),
                         createElement('div', {
@@ -601,10 +601,87 @@
                                 },
                                 createElement('p', {}, `Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industry's standard dummy, when an unknown printer took a galley of type a type specimen book.`),
                                 createElement('p', {}, `Michael Acquah | Awesome Web Developer`)
-                            ),
+                            )
                         )
                     )
-                )
+                ),
+                createElement('section', {
+                        id: 'contact'
+                    },
+                    createElement('div', {
+                            className: 'container'
+                        },
+                        createElement('div', {
+                                class: 'section-title'
+                            },
+                            createElement('h1', {}, 'Contact ',
+                                createElement('span', {
+                                    className: 'accent-text'
+                                }, 'Me')
+                            )
+                        ),
+                        createElement('div', {
+                                className: 'row center-xs center-sm center-md center-lg'
+                            },
+                            createElement('div', {
+                                    className: 'col-xs-12 col-sm-4 col-md-4 col-lg-4'
+                                },
+                                createElement('div', {
+                                        className: 'contact-info'
+                                    },
+                                    createElement('div', {
+                                            className: 'contact-block'
+                                        },
+                                        createElement('i', {
+                                            className: 'fas fa-mobile-alt'
+                                        }),
+                                        createElement('div', {
+                                                className: 'contact-text'
+                                            },
+                                            createElement('p', {}, 'Call'),
+                                            createElement('p', {}, '+233545222245')
+                                        )
+                                    ),
+                                    createElement('div', {
+                                            className: 'contact-block'
+                                        },
+                                        createElement('i', {
+                                            className: 'far fa-envelope'
+                                        }),
+                                        createElement('div', {
+                                                className: 'contact-text'
+                                            },
+                                            createElement('p', {}, 'Email'),
+                                            createElement('p', {}, 'mistyclench99@gmail.com')
+                                        )
+                                    ),
+                                    createElement('div', {
+                                            className: 'contact-block'
+                                        },
+                                        createElement('i', {
+                                            className: 'fas fa-location-arrow'
+                                        }),
+                                        createElement('div', {
+                                                className: 'contact-text'
+                                            },
+                                            createElement('p', {}, 'Address'),
+                                            createElement('p', {}, '26 Orange street, Adenta')
+                                        )
+                                    )
+                                )
+                            ),
+                            createElement('div', {
+                                    className: 'col-xs-12 col-sm-8 col-md-8 col-lg-8'
+                                },
+                                createElement('form', {
+                                        id: 'contact-form',
+                                        onSubmit: 'submitForm(); return false;'
+                                    },
+                                    createElement('div', {
+                                        className: 'field'
+                                    })))
+                        )
+                    ))
             )
 
 
