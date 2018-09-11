@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+#typewriter {
+    min-height: 15em;
+}
+
 body,
 html {
     margin: 0;

@@ -3,59 +3,59 @@
 /*******Filtering*******/
 
 // init Isotope
-  var $grid = $('.img-grid').isotope({
+var $grid = $('.img-grid').isotope({
     itemSelector: '.img-container',
     //layoutMode: 'fitRows',
-  });
+});
 
-  // filter functions
-  var filterFns = {
+// filter functions
+var filterFns = {
     // show if number is greater than 50
     numberGreaterThan50: function() {
 
     },
-  };
+};
 
-  // bind filter button click
-  $('#filter-btn').on( 'click', 'button', function() {
-    var filterValue = $( this ).attr('data-filter');
+// bind filter button click
+$('#filter-btn').on('click', 'button', function() {
+    var filterValue = $(this).attr('data-filter');
     // use filterFn if matches value
-    filterValue = filterFns[ filterValue ] || filterValue;
+    filterValue = filterFns[filterValue] || filterValue;
     $grid.isotope({ filter: filterValue });
-  });
+});
 
-  // change is-checked class on buttons
-  $('.button-group').each( function( i, buttonGroup ) {
-    var $buttonGroup = $( buttonGroup );
-    $buttonGroup.on( 'click', 'button', function() {
-      $buttonGroup.find('.is-checked').removeClass('is-checked');
-      $( this ).addClass('is-checked');
+// change is-checked class on buttons
+$('.button-group').each(function(i, buttonGroup) {
+    var $buttonGroup = $(buttonGroup);
+    $buttonGroup.on('click', 'button', function() {
+        $buttonGroup.find('.is-checked').removeClass('is-checked');
+        $(this).addClass('is-checked');
     });
-  });
+});
 
 /*******Popup Image Gallary in Porfolio*******/
 
 $('.popup-gallery').magnificPopup({
-  type: 'image',
-  gallery:{
-    enabled:true
-  }
+    type: 'image',
+    gallery: {
+        enabled: true
+    }
 });
 
 /*******************************************CAROUSEL IN MY CLIENTS*******************************************/
 
-$(document).ready(function(){
-  $('.loop').owlCarousel({
-    center: true,
-    items:1,
-    loop:true,
-    margin:10,
-    responsive:{
-      600:{
-        items:1
-      }
-    }
-  });
+$(document).ready(function() {
+    $('.loop').owlCarousel({
+        center: true,
+        items: 1,
+        loop: true,
+        margin: 10,
+        responsive: {
+            600: {
+                items: 1
+            }
+        }
+    });
 });
 
 /*******************************************SCROLL MAGIC*******************************************/
@@ -63,58 +63,58 @@ $(document).ready(function(){
 /*******Scroll for the links*******/
 var controller = new ScrollMagic.Controller();
 
-new ScrollMagic.Scene({triggerElement: "#hero", duration: $("#hero").height()}).setClassToggle("#hero-link", "active").addTo(controller);
-new ScrollMagic.Scene({triggerElement: "#about", duration: $("#about").height() + 100}).setClassToggle("#about-link", "active").addTo(controller);
-new ScrollMagic.Scene({triggerElement: "#services", duration: $("#services").height()}).setClassToggle("#services-link", "active").addTo(controller);
-new ScrollMagic.Scene({triggerElement: "#portfolio", duration: $("#portfolio").height()}).setClassToggle("#portfolio-link", "active").addTo(controller);
-new ScrollMagic.Scene({triggerElement: "#client", duration: $("#client").height() + 250}).setClassToggle("#client-link", "active").addTo(controller);
-new ScrollMagic.Scene({triggerElement: "#contact", duration: $("#contact").height()}).setClassToggle("#contact-link", "active").addTo(controller);
+new ScrollMagic.Scene({ triggerElement: "#hero", duration: $("#hero").height() }).setClassToggle("#hero-link", "active").addTo(controller);
+new ScrollMagic.Scene({ triggerElement: "#about", duration: $("#about").height() + 100 }).setClassToggle("#about-link", "active").addTo(controller);
+new ScrollMagic.Scene({ triggerElement: "#services", duration: $("#services").height() }).setClassToggle("#services-link", "active").addTo(controller);
+new ScrollMagic.Scene({ triggerElement: "#portfolio", duration: $("#portfolio").height() }).setClassToggle("#portfolio-link", "active").addTo(controller);
+new ScrollMagic.Scene({ triggerElement: "#client", duration: $("#client").height() + 250 }).setClassToggle("#client-link", "active").addTo(controller);
+new ScrollMagic.Scene({ triggerElement: "#contact", duration: $("#contact").height() }).setClassToggle("#contact-link", "active").addTo(controller);
 
 /*******Other Scroll Magic Elements*******/
 
-$(document).ready(function(){
+$(document).ready(function() {
 
-  var controller2 = new ScrollMagic.Controller();
+    var controller2 = new ScrollMagic.Controller();
 
-  //The about paragraph
-  var about_scene = new ScrollMagic.Scene({
-    triggerElement: '.about-text',
-    triggerHook: .7
-  })
-  .setClassToggle('.about-text', 'about-text-animate')
-  .reverse(false)
-  .addTo(controller2);
-    
+    //The about paragraph
+    var about_scene = new ScrollMagic.Scene({
+            triggerElement: '.about-text',
+            triggerHook: .7
+        })
+        .setClassToggle('.about-text', 'about-text-animate')
+        .reverse(false)
+        .addTo(controller2);
 
-  //Progress bars
-  var progress_bar_scene = new ScrollMagic.Scene({
 
-    triggerElement: '.about-resume',
-    triggerHook: .7,
+    //Progress bars
+    var progress_bar_scene = new ScrollMagic.Scene({
 
-  })
-  .setClassToggle('.inner-percent', 'inner-percent-animate')
-  .reverse(false)
-  .addTo(controller);
-    
-  //Icons in Services
-  var about_scene = new ScrollMagic.Scene({
-    triggerElement: '.trigger',
-    triggerHook: .7
-  })
-  .setClassToggle('.icon', 'service-icon-animate')
-  .reverse(false)
-  .addTo(controller2);
-    
+            triggerElement: '.about-resume',
+            triggerHook: .7,
+
+        })
+        .setClassToggle('.inner-percent', 'inner-percent-animate')
+        .reverse(false)
+        .addTo(controller);
+
+    //Icons in Services
+    var about_scene = new ScrollMagic.Scene({
+            triggerElement: '.trigger',
+            triggerHook: .7
+        })
+        .setClassToggle('.icon', 'service-icon-animate')
+        .reverse(false)
+        .addTo(controller2);
+
 });
 
 /*******************************************MOBILE NAV*******************************************/
-$('.mobile-toggle').click(function(){
-  if($('#main-header').hasClass('open-nav')){
-     $('#main-header').removeClass('open-nav');
-  }else{
-    $('#main-header').addClass('open-nav');
-  }
+$('.mobile-toggle').click(function() {
+    if ($('#main-header').hasClass('open-nav')) {
+        $('#main-header').removeClass('open-nav');
+    } else {
+        $('#main-header').addClass('open-nav');
+    }
 });
 
 /*******************************************NAV SCROLL*******************************************/
@@ -131,6 +131,43 @@ $('nav a').click(function(event) {
 /*******************************************PRELOAD*******************************************/
 var overlay = document.getElementById("preload-overlay");
 
-window.addEventListener('load', function(){
-  overlay.style.display = "none";
+window.addEventListener('load', function() {
+    overlay.style.display = "none";
 })
+
+// set up text to print, each item in array is new line
+var aText = new Array(
+    "I am Michael Acquah quis volutpat porta, ut tincidunt eros est nec diam erat quis volutpat porta, neque massa, ut tincidunt eros est nec diam Fusce Fusce quis volutpat porta, ut tincidunt eros est nec diam erat quis volutpat porta, neque massa, ut tincidunt eros est nec diam Fusce Fusce quis volutpat porta, ut tincidunt eros est nec diam erat quis volutpat porta, neque massa, ut tincidunt eros est nec diam Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+);
+var iSpeed = 100; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 20; // start scrolling up at this many lines
+
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
+
+function typewriter() {
+    sContents = ' ';
+    iRow = Math.max(0, iIndex - iScrollAt);
+    var destination = document.getElementById("typewriter");
+
+    while (iRow < iIndex) {
+        sContents += aText[iRow++] + '<br />';
+    }
+    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+    if (iTextPos++ == iArrLength) {
+        iTextPos = 0;
+        iIndex++;
+        if (iIndex != aText.length) {
+            iArrLength = aText[iIndex].length;
+            setTimeout("typewriter()", 500);
+        }
+    } else {
+        setTimeout("typewriter()", iSpeed);
+    }
+}
+
+
+typewriter();
