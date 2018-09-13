@@ -137,7 +137,7 @@ window.addEventListener('load', function() {
 
 // set up text to print, each item in array is new line
 var aText = new Array(
-    "I am Michael Acquah quis volutpat porta, ut tincidunt eros est nec diam erat quis volutpat porta, neque massa, ut tincidunt eros est nec diam Fusce Fusce quis volutpat porta, ut tincidunt eros est nec diam erat quis volutpat porta, neque massa, ut tincidunt eros est nec diam Fusce Fusce quis volutpat porta, ut tincidunt eros est nec diam erat quis volutpat porta, neque massa, ut tincidunt eros est nec diam Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "A hardworking and results-driven individual with a background in Physics from the university of capecoast, I have a strong passion for technology(digital electronics and computer programming). I aspire to become a system programmer as I want to build a career in software engineering. I enjoy working in teams to achieve organizational goals. ",
 );
 var iSpeed = 100; // time delay of print out
 var iIndex = 0; // start printing array at this posision
